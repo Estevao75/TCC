@@ -1,0 +1,55 @@
+/*Limpa formatão padrão*/
+*{
+    margin: 0;
+    padding: auto;
+}
+body {
+    font-size: 1em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+/*Layout*/
+
+#area-cabeçalho{
+    background-color: #ef233c;
+    padding: 10px;
+    text-align: center;    
+}
+
+/*Formatação menu*/
+
+a {
+    text-decoration: none;
+}
+#area-logo, #area-menu {
+    padding: 10px;
+}
+
+a:link, a:visited {
+    color: #c9fdfd;
+    padding: 8px 20px ;
+}
+a:hover {
+    color: #222525 ;
+    background: #8d99ae;
+}
+
+/*Formatação geral*/
+
+h1 {
+    color: aliceblue;
+    font-size: larger, 2.5em;
+}
+
+#area-principal{
+    background-color: #c9fdfd;
+    width: 96%;
+    text-align: center;
+    margin-top: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    
+}
+
+
