@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Técnica POMODORO</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    </head>
+    <body background="Imagens/fundoRelogio.png">
+        <img src="Imagens/tomate.webp" height="113" align="right">
+        <img src="Imagens/tomate.webp" height="113" align="left">
+        <div id="area-cabeçalho">
+            <div id="area-logo">
+                <h1>Pomodoro</h1>                
+            </div>
+            <p align="center" style="color:azure; padding:9.3px;">Bons Estudos!</p>
+        </div>  
+      
+        <p align="center" style="margin-top: 100px; font-size: 4.5em;color: aliceblue;">CRONÔMETRO</p>
+    <div class="principal" align="center" style="margin-top: 50px; font-size: 6em;color: aliceblue;">
+      <p class="tempo">
+        <span class="minutos">00</span>:<span class="segundos">00</span>:<span class="milissegundos">00</span>
+      </p>
+      <div> 
+        <button onclick="iniciar()" class="iniciar" style="padding: 20px ; margin: 10px; font-family:Georgia, 'Times New Roman', Times, serif; font-size: 0.27em; ">INICIAR</button>
+        <button onclick="pausar()" class="pausar" style="padding: 20px ; margin: 10px; font-family:Georgia, 'Times New Roman', Times, serif; font-size: 0.27em; ">PAUSAR</button>
+        <button onclick="resetar()" class="resetar" style="padding: 20px ; margin: 10px; font-family:Georgia, 'Times New Roman', Times, serif; font-size: 0.27em; ">RESETAR</button>
+      </div>
+    </div>
+    <script src="funcaoRelogio.js"></script>
+        
+    </body>
+</html>
