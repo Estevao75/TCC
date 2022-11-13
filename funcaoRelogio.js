@@ -1,10 +1,12 @@
 const miliseg = document.querySelector('.milissegundos')
 const seg = document.querySelector('.segundos')
 const min = document.querySelector('.minutos')
+const hor = document.querySelector('.horas')
 
 let miliNum = 0
 let segNum = 0
 let minNum = 0
+let horNum = 0 
 let INTERVALO
 
 function milissegundos() {
@@ -33,7 +35,7 @@ function segundos() {
     segNum = 0
     minutos()
   }
-}
+} 
 
 function minutos() {
   minNum++
@@ -42,6 +44,68 @@ function minutos() {
   } else {
     min.innerHTML = minNum
   }
+
+  if (minNum == 59) {
+    minNum = 0
+    horas()
+  }
+
+  if(minNum == 25 ){
+    alert("Hora do Descanso!")
+    iniciar()
+    }
+
+  if(minNum == 30){
+    alert("Recomeçar os Estudos!")
+    iniciar()
+    }
+  
+  if(minNum == 55 ){
+    alert("Hora do Descanso!")
+    iniciar()
+    }
+} 
+      
+function horas() {
+  horNum++
+  if (horNum < 10) {
+    hor.innerHTML = '0' + horNum
+  } else {
+    hor.innerHTML = horNum
+  }    
+  if(horNum == 1){
+    alert("Recomeçar os Estudos!")
+    iniciar()
+    }
+  
+  if((horNum == 1) && (minNum == 25) ){
+    alert("Hora do Descanso!")
+    iniciar()
+    }  
+
+  if((horNum == 1) && (minNum == 30)){
+    alert("Recomeçar os Estudos!")
+    iniciar()  
+    }
+
+  if((horNum == 1) && (minNum == 25) ){
+    alert("Hora do Descanso!")
+    iniciar()
+    }  
+
+  if((horNum == 1) && (minNum == 30)){
+    alert("Recomeçar os Estudos!")
+    iniciar()  
+    }
+  if((horNum == 1) && (minNum == 55) ){
+    alert("Hora do Descanso!")
+    iniciar()
+    }  
+
+  if((horNum == 2) && (minNum == 10)){
+    alert("Parabéns!!! Você concluiu os ciclos POMODOROS!")
+    resetar
+    }  
 }
 
 function iniciar() {
@@ -49,10 +113,9 @@ function iniciar() {
   INTERVALO = setInterval(() => {
     milissegundos()
   }, 10)
-  
 }
 
-function pausar() {
+ function pausar() {
   clearInterval(INTERVALO)
 }
 
@@ -65,4 +128,3 @@ function resetar() {
   seg.innerHTML = '00'
   min.innerHTML = '00'
 }
-
